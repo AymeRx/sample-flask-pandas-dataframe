@@ -31,7 +31,7 @@ $ cd flask-pandas-dataframe
 $
 $ # Virtualenv modules installation (Unix based systems)
 $ virtualenv env
-$ source env/bin/activate
+$ source ../docker-aston-poec/venv/bin/activate
 $
 $ # Virtualenv modules installation (Windows based systems)
 $ # virtualenv env
@@ -50,16 +50,16 @@ $ # Load the data into the database
 $ flask load-data titanic-min.csv
 $
 $ # Set the FLASK_APP environment variable
-$ (Unix/Mac) export FLASK_APP=run.py
-$ (Windows) set FLASK_APP=run.py
-$ (Powershell) $env:FLASK_APP = ".\run.py"
+$ (Unix/Mac) export FLASK_APP=app.py
+$ (Windows) set FLASK_APP=app.py
+$ (Powershell) $env:FLASK_APP = ".\app.py"
 $
 $ # Set up the DEBUG environment
 $ # (Unix/Mac) export FLASK_ENV=development
 $ # (Windows) set FLASK_ENV=development
 $ # (Powershell) $env:FLASK_ENV = "development"
 $ 
-$ flask run 
+$ flask run --host=0.0.0.0 --port=31201
 $ # access the app in the browser: http://localhost:5000
 ```
 
